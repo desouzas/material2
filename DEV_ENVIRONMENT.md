@@ -1,22 +1,20 @@
 # Developer guide: getting your environment set up
 
 1. Make sure you have `node` installed with a version at _least_ 5.5.0.
-2. Run `npm install -g angular-cli` to install the Angular CLI.
-3. Fork the `angular/material2` repo. 
-4. Clone your fork. 
+2. Fork the `angular/material2` repo.
+3. Clone your fork.
    Recommendation: name your git remotes `upstream` for `angular/material2`
    and `<your-username>` for your fork. Also see the [team git shortcuts](https://github.com/angular/material2/wiki/Team-git----bash-shortcuts).
-5. From the root of the project, run `npm install`.
+4. From the root of the project, run `npm install`.
 
-To build the project, run `ng build`. 
-To watch for changes and automatically rebuild, run `ng build --watch`
+To build the project, run `npm run build`.
 
-To bring up a local server, run `ng serve`. This will automatically watch for changes and rebuild.
-After the changes rebuild, the browser currently needs to be manually refreshed.
+To bring up a local server on port 4200, run `npm run demo-app`.
+This will automatically watch for changes and rebuild.
 
 ### Running unit tests
 
-To run unit tests, run `npm test` or use the CLI with `ng test`.
+To run unit tests, run `npm test`.
 
 ### Running e2e tests
 
@@ -30,11 +28,8 @@ npm run webdriver-manager update
 In order to run the tests:
 
 ```bash
-# 1. Spin up a local server with 
-MD_APP=e2e ng serve
-
-# 2. Run tests with:
-ng e2e
+# 1. Spin up a local server and run tests with:
+npm run e2e
 ```
 
 ### Running benchmarks
